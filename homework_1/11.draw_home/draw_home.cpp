@@ -5,9 +5,7 @@ void draw_line(int width, char symbol, bool newline){
     for(int i = 0; i < width; ++i){
         cout << symbol;
     }
-    if (newline){
-        cout << endl;
-    }
+    if (newline) cout << endl;
 }
 
 void draw_side_wall(int height, int width){
