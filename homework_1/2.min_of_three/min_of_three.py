@@ -3,9 +3,9 @@ y = int(input())
 z = int(input())
 
 m = x
-if y > m:
+if y < m:
     m = y
-if z > m:
+if z < m:
     m = z
 
 print(m)
