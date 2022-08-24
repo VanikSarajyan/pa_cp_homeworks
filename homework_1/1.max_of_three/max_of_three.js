@@ -1,4 +1,4 @@
-const prompt = require("prompt-sync")({ sigint: true });
+const prompt = require("prompt-sync")();
 
 // +"5" ~> 5
 const x = +prompt();
