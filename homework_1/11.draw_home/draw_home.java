@@ -5,7 +5,7 @@ class draw_home {
         Scanner input = new Scanner(System.in);
 
         int width = input.nextInt();
-        int height = width / 5;
+        int height = width / 5 + 1;
 
         draw_roof(width);
         draw_line(width, '_', true);

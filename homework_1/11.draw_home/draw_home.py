@@ -14,7 +14,7 @@ def draw_roof(width):
         draw_line(i, "*", True)
 
 width = int(input())
-height = width // 5
+height = width // 5 + 1
 
 draw_roof(width)
 draw_line(width, '_', True)

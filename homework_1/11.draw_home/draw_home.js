@@ -1,7 +1,7 @@
 const prompt = require('prompt-sync')()
 
 let width = +prompt();
-let height = width / 5;
+let height = Math.floor(width / 5) + 1;
 
 function draw_line(width, symbol, newline){
     process.stdout.write(symbol.repeat(width));

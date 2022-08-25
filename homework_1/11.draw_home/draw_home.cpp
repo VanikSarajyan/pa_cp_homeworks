@@ -27,7 +27,7 @@ int main() {
     int width, height;
     cin >> width;
 
-    height = width / 5;
+    height = width / 5 + 1;
 
     draw_roof(width);
     draw_line(width, '_', true);
