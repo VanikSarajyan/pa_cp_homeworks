@@ -24,5 +24,8 @@ int main() {
         }
     }
 
+    // one more solution, 1.sort the array, repeating elements should
+    // be next to each other 2. count and print all repeating elements
+
     std::cout << std::endl;
 }
