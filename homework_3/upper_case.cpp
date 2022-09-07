@@ -4,7 +4,7 @@ char * to_upper_case(char * str){
     char diff = 'A' - 'a';
 
     for(int i = 0; str[i] != '\0'; ++i){
-        if(str[i] > 'Z'){
+        if(str[i] >= 'a' && str[i] <= 'z'){
             str[i] += diff;
         }
     }
