@@ -16,8 +16,8 @@ int main() {
     char s1[100];
     char s2[10];
 
-    std::cin.get(s1, 20).get();
-    std::cin.get(s2, 10);
+    std::cin >> s1;
+    std::cin >> s2;
 
     strcat(s1, s2);
 
