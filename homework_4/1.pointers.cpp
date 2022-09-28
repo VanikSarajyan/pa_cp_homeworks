@@ -8,5 +8,7 @@ int main() {
 	double * pd = &d;
 	char * pc = &c;
 
-	std::cout << pi << std::endl << pd << std::endl << (void *)pc << std::endl;
+	std::cout << pi << std::endl;
+	std::cout << pd << std::endl;
+	std::cout << (void *)pc << std::endl;
 }
