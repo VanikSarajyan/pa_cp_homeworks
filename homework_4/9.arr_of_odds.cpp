@@ -12,6 +12,7 @@ int main() {
         }
     }
 
+    // g++ allows as C extension
     int odds[odd_count];
 
     for(int i = 0, j = 0; i < length; ++i){
