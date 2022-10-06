@@ -1,0 +1,9 @@
+hi-բարև
+if-եթե
+while-քանի դեռ
+number-թիվ
+string-տող
+tuple-կոռտեժ :)
+dictionary-բառարան
+set-բազմություն
+file-ֆայլ
