@@ -9,8 +9,7 @@ if hour <= 12 and (m == 1 or m == 2):
     m -= 1
     new_hour = (hour + ahead) % 12
     m += ((hour + ahead) // 12 ) % 2
-    m %= 2
-    period = "am" if m == 0 else "pm"
+    period = "am" if m % 2 == 0 else "pm"
     print(f"New hour: {new_hour} {period}")
 else:
     print("Invalid input.")
