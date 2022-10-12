@@ -1,6 +1,3 @@
-l1 = [1,3,5,7,8,9,10]
-l2 = [-1,2,4,6]
-
 def merge_sorted_lists(l1,l2):
     merged = []
     i = 0
@@ -23,5 +20,8 @@ def merge_sorted_lists(l1,l2):
         j += 1
 
     return merged
+
+l1 = [1,3,5,7,8,9,10]
+l2 = [-1,2,4,6]
 
 print(merge_sorted_lists(l1,l2))
