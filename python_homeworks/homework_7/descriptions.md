@@ -1,0 +1,3 @@
+1. Implement reduce function (functools) and reduce (itertools)
+2. Make a nested loop and a python closure to make functions to get multiple multiplication functions using closures. That is using closures, one could make functions to create multiply_with_5() or multiply_with_4() functions using closures.
+3. Write a function that is given a 9 × 9 potentially solved Sudoku and returns True if it is solved correctly and False if there is a mistake. The Sudoku is correctly solved if there are no repeated numbers in any row or any column or in any of the nine “blocks.”
