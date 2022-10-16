@@ -7,7 +7,11 @@ def sudoku_solved(board):
         return len(set(col)) == 9
 
     def correct_block(i, j):
-        pass
+        elems = set()
+        for row in board[i:i+3]:
+            for col in row[j:j+3]:
+                elems.add(col)
+        return len(elems) == 9
 
 
     for i in range(9):
@@ -16,10 +20,10 @@ def sudoku_solved(board):
         if not correct_col(i):
             return False
 
-    # for i in range(0,9,3):
-    #     for j in range(0,9,3):
-    #         if not correct_block(i,j):
-    #             return False
+    for i in range(0,9,3):
+        for j in range(0,9,3):
+            if not correct_block(i,j):
+                return False
 
     return True
 
