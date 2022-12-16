@@ -1,6 +1,6 @@
 import time
 class Sun:
-    def __init__(self, shines = True, rise_time: int = 16, set_time: int = 8) -> None:
+    def __init__(self, shines = True, rise_time: int = 12, set_time: int = 12) -> None:
         self._rise_time = rise_time
         self._set_time = set_time
         self._set_start = 0
