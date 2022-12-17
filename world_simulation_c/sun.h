@@ -9,8 +9,8 @@ void sun_destruct(struct Sun *);
 
 void rise(struct Sun *);
 void set(struct Sun *);
-int is_shining(struct Sun * s);
-void update_status(struct Sun * s);
-void sun_print_status(struct Sun * s);
+int is_shining(struct Sun *);
+void update_status(struct Sun *);
+void sun_print_status(struct Sun *);
 
 #endif
