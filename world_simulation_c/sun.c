@@ -1,6 +1,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "sun.h"
 
 typedef struct Sun {
     int rise_time;
@@ -10,24 +11,24 @@ typedef struct Sun {
     int shines;
 } Sun;
 
-void rise(Sun * s){
-    s->shines = 1;
-    s->rise_start = time(NULL);
-    
-}
-
 Sun * sun_init(){
     return (Sun*)malloc(sizeof(Sun));
 }
 
-void destruct(Sun * s){
-    free(s);
-}
-
-void construct(Sun * s){
+void sun_construct(Sun * s){
     s->rise_time = 12;
     s->set_time = 12;
     rise(s);
+}
+
+void sun_destruct(Sun * s){
+    free(s);
+}
+
+void rise(Sun * s){
+    s->shines = 1;
+    s->rise_start = time(NULL);
+    
 }
 
 void set(Sun * s){
@@ -52,7 +53,7 @@ void update_status(Sun * s){
     }
 }
 
-void print_status(Sun * s){
+void sun_print_status(Sun * s){
     int current_time = time(NULL);
     if(s->shines){
         printf("Sun is shining for %d seconds.\n", current_time - s->rise_start);
