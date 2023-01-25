@@ -43,10 +43,3 @@ class Address:
 
     def set_zip(self, zip: str) -> None:
         self.__zip = zip
-
-if __name__ == "__main__":
-    a1 = Address("Armenia", "Yerevan", "Yerevan", "Azatutyan Avenue 24/17", "0014")
-    a2 = Address("Armenia", "Yerevan", "Yerevan", "Azatutyan Avenue 24", "0014")
-    print(a1.get_id())
-    print(a2.get_id())
-        

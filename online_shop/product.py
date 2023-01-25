@@ -37,6 +37,5 @@ class Product:
     def set_price(self, price: float) -> None:
         self.__price = price
 
-if __name__ == "__main__":
-    p1 = Product("IPhone 14", "IPhone 14 64GB", "/images_of_product_0/", 999)
-    print(p1.get_id(), p1.get_description())
+    def __repr__(self) -> str:
+        return f"Product {self.__id}"

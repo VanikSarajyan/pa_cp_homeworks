@@ -71,15 +71,3 @@ class User:
             self.__address = address
         else:
             raise ValueError(f"{address} is not a valid address.")
-
-
-if __name__ == "__main__":
-
-    u1 = User("u1", "u1@gmail.com", "u", "1", "099", Address("Armenia", "Yerevan", "Yerevan", "Azatutyan Avenue 24/17", "0014"))
-    u2 = User("u2", "u2@gmail.com", "u", "2", "099", Address("Armenia", "Yerevan", "Yerevan", "Azatutyan Avenue 24/17", "0014"))
-    u3 = User("u3", "u3@gmail.com", "u", "3", "099", Address("Armenia", "Yerevan", "Yerevan", "Azatutyan Avenue 24/17", "0014"))
-    print(u1.get_id())
-    print(u2.get_id())
-    print(u3.get_id())
-    print(u1.get_username())
-    print(u1.get_address())
