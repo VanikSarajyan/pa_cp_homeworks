@@ -1,16 +1,17 @@
 from address import Address
-from helpers import valid_username, valid_email, valid_first_name, valid_last_name, valid_address
+from helpers import valid_username, valid_email, valid_first_name, valid_last_name, valid_address, valid_phone
 
 class User:
 
     __id = 0
 
-    def __init__(self, username: str, email: str, first_name: str, last_name:str, address: Address = Address()) -> None:
+    def __init__(self, username: str, email: str, first_name: str, last_name:str, phone: str, address: Address = Address()) -> None:
         self.__id = User.__id
         self.set_username(username)
         self.set_email(email)
         self.set_first_name(first_name)
         self.set_last_name(last_name)
+        self.set_phone(phone)
         self.set_address(address)
         User.__id += 1
     
@@ -44,7 +45,7 @@ class User:
         else:
             raise ValueError(f"{first_name} is not a valid first_name.")
 
-    def get_last_name(self) -> None:
+    def get_last_name(self) -> str:
         return self.__last_name
 
     def set_last_name(self, last_name: str) -> None:
@@ -52,6 +53,15 @@ class User:
             self.__last_name = last_name
         else:
             raise ValueError(f"{last_name} is not a valid last_name.")
+
+    def get_phone(self) -> str:
+        return self.__phone
+    
+    def set_phone(self, phone: str) -> None:
+        if valid_phone(phone):
+            self.__phone = phone
+        else:
+            raise ValueError(f"{phone} is not a valid phone number.")
 
     def get_address(self) -> Address:
         return self.__address
@@ -65,9 +75,9 @@ class User:
 
 if __name__ == "__main__":
 
-    u1 = User("u1", "u1@gmail.com", "u", "1")
-    u2 = User("u2", "u2@gmail.com", "u", "2")
-    u3 = User("u3", "u3@gmail.com", "u", "3")
+    u1 = User("u1", "u1@gmail.com", "u", "1", "099")
+    u2 = User("u2", "u2@gmail.com", "u", "2", "099")
+    u3 = User("u3", "u3@gmail.com", "u", "3", "099")
     print(u1.get_id())
     print(u2.get_id())
     print(u3.get_id())

@@ -14,5 +14,8 @@ def valid_first_name(first_name) -> bool:
 def valid_last_name(last_name) -> bool:
     return 0 < len(last_name) < 20
 
+def valid_phone(phone: str) -> bool:
+    return True
+
 def valid_address(address: Address) -> bool:
     return True
