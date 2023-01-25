@@ -5,7 +5,7 @@ class User:
 
     __id = 0
 
-    def __init__(self, username: str, email: str, first_name: str, last_name:str, phone: str, address: Address = Address()) -> None:
+    def __init__(self, username: str, email: str, first_name: str, last_name:str, phone: str, address: Address) -> None:
         self.__id = User.__id
         self.set_username(username)
         self.set_email(email)
@@ -75,10 +75,11 @@ class User:
 
 if __name__ == "__main__":
 
-    u1 = User("u1", "u1@gmail.com", "u", "1", "099")
-    u2 = User("u2", "u2@gmail.com", "u", "2", "099")
-    u3 = User("u3", "u3@gmail.com", "u", "3", "099")
+    u1 = User("u1", "u1@gmail.com", "u", "1", "099", Address("Armenia", "Yerevan", "Yerevan", "Azatutyan Avenue 24/17", "0014"))
+    u2 = User("u2", "u2@gmail.com", "u", "2", "099", Address("Armenia", "Yerevan", "Yerevan", "Azatutyan Avenue 24/17", "0014"))
+    u3 = User("u3", "u3@gmail.com", "u", "3", "099", Address("Armenia", "Yerevan", "Yerevan", "Azatutyan Avenue 24/17", "0014"))
     print(u1.get_id())
     print(u2.get_id())
     print(u3.get_id())
     print(u1.get_username())
+    print(u1.get_address())
